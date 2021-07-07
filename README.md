@@ -12,13 +12,13 @@ We added the local neighborhood algorithm 2opt, to improve the final solution.
 ### Train
 By default, the code is running in the training mode on a single gpu. For running the code, one can use the following command:
 ```bash
-python main.py --task=vrp10
+python with2opt.py --task=vrp10
 ```
 
 ### Inference
 For running the trained model for inference, it is possible to turn off the training mode. For this, you need to specify the directory of the trained model, otherwise random model will be used for decoding:
 ```bash
-python main.py dataset_name --task=vrp10 --is_train=False --model_dir=./path_to_your_saved_checkpoint
+python with2opt.py dataset_name --task=vrp10 --is_train=False --model_dir=./path_to_your_saved_checkpoint
 ```
 where dataset_name is the input dataset
 
